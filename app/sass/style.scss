@@ -3,6 +3,8 @@
 $color-primary: hsl(240, 2%, 23%);
 $color-secondary: hsl(240, 4%, 95%);
 
+$bp-twocolumns: "screen and (min-width: 15em)";
+
 // Base
 
 @font-face {
@@ -69,17 +71,26 @@ li {
   }
 }
 
-.social-wrapper {
-
+.project-wrapper {
+  @media #{$bp-twocolumns} {
+    display: flex;
+  }
 }
 
-.social-item {
+.project-item {
+  @media #{$bp-twocolumns} {
+  }
+}
 
+.social-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .social-icon {
   width: 2em;
   height: 2em;
+  margin: .5em;
 
   path {
     fill: red;
