@@ -23,19 +23,28 @@ html
 
   body
     header
-      h1 
-        span.uppercase Malaparte
-        br 
+      h1.pagetitle
+        span Malaparte
         span Media
       
     block content
 
     footer
       h1 Social:
-      ul
-        li
-          a(href="https://facebook.com/malapartemedia") Facebook
-        li
-          a(href="https://soundcloud.com/malapartemedia") Soundcloud
-        li
-          a(href="https://twitter.com/malapartemedia") Twitter
+      ul.social-wrapper
+        li.social-item
+          a(href="https://facebook.com/malapartemedia") 
+            span.visuallyhidden Facebook
+            svg.social-icon
+              use(xlink:href="/images/sprite.svg#fb")
+            
+        li.social-item
+          a(href="https://soundcloud.com/malapartemedia")
+            span.visuallyhidden Soundcloud
+            svg.social-icon
+              use(xlink:href="/images/sprite.svg#sc")
+        li.social-item
+          a(href="https://twitter.com/malapartemedia")
+            span.visuallyhidden Twitter
+            svg.social-icon
+              use(xlink:href="/images/sprite.svg#tw")

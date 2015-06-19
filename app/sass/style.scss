@@ -1,5 +1,9 @@
+// Vars
+
 $color-primary: hsl(240, 2%, 23%);
 $color-secondary: hsl(240, 4%, 95%);
+
+// Base
 
 @font-face {
     font-family: 'League Spartan';
@@ -18,6 +22,17 @@ body {
   color: $color-primary;
   font-family: "futura-pt-condensed";
   font-size: 1.4em;
+  padding: .5em;
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
 }
 
 h1,
@@ -27,6 +42,59 @@ h4 {
   font-family: 'League Spartan';
 }
 
-.uppercase {
-  text-transform: uppercase;
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+// Blocks/Theme
+
+.pagetitle {
+  line-height: 1;
+
+  span:first-child {
+    text-transform: uppercase;
+  }
+
+  span:nth-child(2) {
+    text-transform: lowercase;
+  }
+
+  > span {
+    display: block;
+  }
+}
+
+.social-wrapper {
+
+}
+
+.social-item {
+
+}
+
+.social-icon {
+  width: 2em;
+  height: 2em;
+
+  path {
+    fill: red;
+  }
+}
+
+// Utils
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
