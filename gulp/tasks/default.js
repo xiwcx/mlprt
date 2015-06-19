@@ -7,11 +7,11 @@ var reload      = browserSync.reload;
 gulp.task('default', ['clean', 'jade', 'sass'], function () {
   browserSync.init({
       server: {
-          baseDir: "./dist/"
+          baseDir: "./dist"
       }
   });
 
-  gulp.watch(['./*.html', './css/*.css']).on('change', browserSync.reload);
   gulp.watch('./app/sass/**/*.scss', ['sass']);
-  gulp.watch('./app/jade/**/*.jade', ['jade']);
+  gulp.watch('./app/templates/**/*.jade', ['jade']);
+  gulp.watch('./dist/*.html').on('change', browserSync.reload);
 });

@@ -1,13 +1,5 @@
-$color: red;
-
-body {
-  font-family: 'League Spartan';
-}
-
-div {
-  background-color: $color;
-}
-
+$color-primary: hsl(240, 2%, 23%);
+$color-secondary: hsl(240, 4%, 95%);
 
 @font-face {
     font-family: 'League Spartan';
@@ -19,4 +11,22 @@ div {
          url('/fonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
     font-weight: bold;
     font-style: normal;
+}
+
+body {
+  background-color: $color-secondary;
+  color: $color-primary;
+  font-family: "futura-pt-condensed";
+  font-size: 1.4em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'League Spartan';
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
